@@ -1,102 +1,102 @@
 
 # E02a-Control-Structures
 
-Let's start experimenting with some Python code! This is a set of exercises for MSCH-C220; they should give you the tools to help build your first game.
- 
-This exercise assumes that you have already installed Python, GitHub Desktop, and VS Code, and that you have already created a GitHub account. If that is not the case, please refer to previous exercises.
+- Open main01.py. Before running it, what do you expect this program to do? 
+  - prints greetings and the imput statement. 
 
-This repository contains several files that you will need to alter to complete the assignment. Fork this repository (instructions below) and edit the files. Commit and push the changes back to GitHub and turn in the URL to your repository on Canvas.
+  - Now right click on the main1.py window and select “Run Python File in Terminal”. Click in the bottom panel, and answer the question. Describe what happened. 
+  The program ended
 
-Comments in Python are marked by a # sign (for single-line comments) or three matching quotation marks (''' or """) if a comment requires more than one line. They should also appear in a different color in VS Code. The Python Interpreter ignores comments, so you can safely include any information you want there.
-
-*If you wish your exercise to be graded, please edit the LICENSE file (add the current year and your name).*
-
-Edit README.md to answer the following questions:
-
-- Open main01.py. Before running it, what do you expect this program to do?
-  - Now right click on the main1.py window and select “Run Python File in Terminal”. Click in the bottom panel, and answer the question. Describe what happened.
   - What do you think the program did with what you typed in answer to the question?
+  - it was saved in a randomly assigned memory location
+
 - Open main02.py. Before running it, describe how this is different than main01.py.
+- Assigned the input to a variable
+
   - What do you think the color = input() will do?
+  - assigned the value that the user inputs to the variable color
+
   - Run the program in the terminal and answer the question. Did the program do what you expected?
+  - yes it did
+
 - Open main03.py. Before running it, describe how this is different than main02.py.
+- The if statement will force the correct choice
+
   - What is happening on lines 9–12?
+  - if the user inputs red they get the correct message otherwise they get the incorrect message
+
   - Why are lines 10 and 12 indented?
+  - To designate what happens in the if and else statements
+
   - Run the program and answer the question. What happens if you don’t capitalize Red?
+  - The incorrect is printed because the r is not capitalized
+
   - What does this tell you about "color"?
+  - It must be the exact same string
+
 - Open main04.py. Before running it, describe how this is different than main03.py.
+- The if statement has two conditions for a correct color
+
   - What problem is this trying to solve?
+  - That the R in red needs to be capitalized
+
   - Run the program and answer the question. What happens if you use some other capitalization scheme (i.e., “RED” or “reD“)?
+  - The Incorrect message is displayed
+
 - Open main05.py. What do you expect line 9 to do?
+- Allows any capitalization scheme to be used to answer the question
+
   - What problem is it trying to solve?
+  - The correct input color being given the wrong message
+
   - Run the program and answer the question. What happens if you add spaces before or after the word (i.e., “ RED “ or “ red”)?
+  - The incorrect message is given again
+
  - Open main06.py. How is line 9 different than in main05.py?
+ - It adds the strip() function
+   
    - What would you guess .strip() is doing?
+   - removing spaces on the front and end of a string
+   
    - Run the program and answer the question. Is there another way of writing “red” that will break this logic?
+   - Putting a space in between the letters of "red" such as "re d"
+ 
  - Open main07.py. Before running this program, how do you expect this to be different than main06.py?
+ - There is an extra message that will be displayed if pink is input
+   
    - What is happening on line 12?
+   - an elif statement is used to give another option to the user besides red or nothing
+   
    - Run the program and answer the question.
+   - Displays pink or red. Still has the problem of a space in the middle breaking the logic
+ 
  - Open main08.py. What is the purpose of line 9?
+ - Creates a loop that will continue to ask for input until the user gives the red input
+   
    - Why are lines 10–17 indented?
+   - The indentation is meant to include those lines inside the while loop
+   
    - Run the program. What would happen if line 10 were moved before line 9 (and no longer indented)?
+   - If the user input red correctly nothing would be run. If they input another color the program would loop infinitely because the user is never asked in the loop to give another answer
+   
    - Make that change and run the program again. (To end any Python program, you can type ctrl-c)
+   - Loops infinitely on wrong input and never loops on the right one
+
  - Open main09.py. What is happening on line 13?
+ - We added a count variable and set it to 1 (default was 0)
+   
    - What is the purpose of “count”?
+   - Later in the program it will display how many tries we took to get the correct color
+   
    - What is happening on line 22?
+   - Prints the number of tries using the format funtion to add the count variable to the string in place
+   of the parentheses
+
    - Run the program.
+   - Ran the program and if red is input, the number correct statement and number of tries is displayed. If any other colors were used the Sorry message is seen then the input agian until the correct color and number of guesses are finally shown
+
  - *Extra credit:* open main10.py. Add a comment to each line describing what it is doing (a comment follows a pound sign [#]).
+ - Commented all lines of main10.py
+
  - *Extra credit:* open main11.py. What is happening on lines 6-11?
-  
-Commit your changes and push them back to the repository.
- 
-
----
-
-Instructions for forking this repository:
- 
-Log into your account on [github.com](https://github.com)
-
-Go to the [exercise template page](https://github.com/BL-MSCH-C220-S20/E02a-Control-Structures) on GitHub
-
-There is a button in the top right corner of the page labeled "Fork". Press that now
-
-This will create an independent copy of this repository in your account that you can control and edit
-
-Go to your GitHub home page, and select the new E02a-Control-Structures repository
-
-On that page, you will see a green button labeled "Clone or download". Press that now. You will see a drop down box. Press the "Open in Desktop" button.
-
-This should launch GitHub Desktop. It will ask you for a location (on your computer) where the repository may be cloned (downloaded). Choose a location that will be easy for you to find, and press the blue "Clone" button.
-
-Once GitHub Desktop has cloned (downloaded) the code, it will be responsible for keeping the code on your local computer synchronized with the repository in your GitHub account. Now, open Visual Studio Code, and choose File->Open. Find the folder of the cloned repository and select Open.
-
-In the left (File Explorer) panel, you should see a list of files that comprise this repository
-
-First, edit the file called LICENSE. Replace year and name with the current year and your name. Save this file
-
-Then open README.md. Feel free to remove any extraneous information, and then answer the questions posed in the file. You can add your answers after each question
-
-When the time comes for you to run any of the python files, you can do so by clicking the green arrow in the top right corner of the window or by right-clicking on the code and selecting "Run Python File in Terminal". The results will appear at the bottom. If you don't see "Run Python File in Terminal" in the contextual menu, that is because VS Code doesn't have the Python extension installed. You can do that here: [https://marketplace.visualstudio.com/items?itemName=ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-
-When you are done editing the files, return to GitHub Desktop. In the left panel, you should see a list of the files that have changed
-
-At the bottom of the leftmost area, you should see a text box labeled "Summary (required)". Add a message that describes what you have done; these messages are typically stated in the active-present tense. For example, "Updates the LICENSE, README.md, and completes the assignment." Push the blue "Commit to master" button
-
-In the top bar of the window, you should see a button that is labeled "Push origin", push that now
-
-Check out your page on GitHub. You should see the changes you made reflected there, Repeat steps 10 through 16 as necessary
-
-When you are satisfied with your efforts, turn in a URL to your repository on Canvas
-
----
-If you try to push your changes, and you receive a permission error, it is likely that you are trying to edit the BL-MSCH-C220-S20 copy of the repository rather than your own. Make sure you don't skip the step of forking your own copy and cloning that.
-
----
-
-The grading criteria will be as follows:
- 
-[1 point] Repository contains a description of the project in README.md
-
-1 point will be awarded for answering the questions associated with each of the files
-
-10 points total (+2 points extra credit)
+ - Lines 6 - 11 define a function called choose_color. The function is given a last_color parameter. Inside the function, a list colors is created and filled with the strings 'red', 'orange', 'yellow', 'green', 'blue', 'violet' and 'purple'. A variable c is then created that is assigned a random color from the colors list. A while loop checks to see if the given parameter last_color is the same as the color assigned to the variable c. If it is, c is assigned a new random string value from the colors list and the loop checks again. The loop continues until the two variables are not the same and then the color assigned to c is returned from the function to be used in later code.
